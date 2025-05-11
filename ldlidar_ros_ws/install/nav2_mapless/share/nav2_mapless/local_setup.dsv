@@ -1,0 +1,2 @@
+source;share/nav2_mapless/environment/ament_prefix_path.sh
+source;share/nav2_mapless/environment/path.sh
