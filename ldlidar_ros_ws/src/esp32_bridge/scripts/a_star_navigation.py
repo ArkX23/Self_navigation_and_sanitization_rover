@@ -1,0 +1,258 @@
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Twist, PoseStamped
+from sensor_msgs.msg import LaserScan
+from nav_msgs.msg import OccupancyGrid, Path
+from tf2_ros import TransformListener, Buffer
+import numpy as np
+import math
+from heapq import heappush, heappop
+
+class AStarNavigation(Node):
+    def __init__(self):
+        super().__init__('a_star_navigation')
+        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.costmap_pub = self.create_publisher(OccupancyGrid, '/costmap', 10)
+        self.path_pub = self.create_publisher(Path, '/plan', 10)
+        self.scan_sub = self.create_subscription(
+            LaserScan, '/scan', self.scan_callback, 10)
+        self.goal_sub = self.create_subscription(
+            PoseStamped, '/goal_pose', self.goal_callback, 10)
+        
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+        
+        self.goal_pose = None
+        self.robot_pose = None
+        self.scan_data = None
+        
+        # Parameters
+        self.min_range = 0.18  # Ignore < 18 cm
+        self.max_linear_speed = 0.4
+        self.max_angular_speed = 1.0
+        self.grid_resolution = 0.05
+        self.grid_width = 4.0
+        self.grid_height = 4.0
+        self.inflation_radius = 0.3
+        self.safe_dist = 0.5
+        
+        self.grid = None
+        self.path = []
+        
+        self.create_timer(0.1, self.control_loop)
+        
+    def scan_callback(self, msg):
+        self.scan_data = msg
+        self.update_costmap()
+        
+    def goal_callback(self, msg):
+        if msg.header.frame_id == 'odom':
+            self.goal_pose = msg.pose
+            self.get_logger().info(f'Goal received: x={msg.pose.position.x}, y={msg.pose.position.y}')
+            self.plan_path()
+        
+    def get_robot_pose(self):
+        try:
+            trans = self.tf_buffer.lookup_transform('odom', 'base_link', rclpy.time.Time())
+            self.robot_pose = trans.transform
+            return True
+        except Exception as e:
+            self.get_logger().warn(f'TF lookup failed: {e}')
+            return False
+        
+    def update_costmap(self):
+        if not self.scan_data or not self.get_robot_pose():
+            return
+        
+        costmap = OccupancyGrid()
+        costmap.header.frame_id = 'odom'
+        costmap.header.stamp = self.get_clock().now().to_msg()
+        costmap.info.resolution = self.grid_resolution
+        costmap.info.width = int(self.grid_width / self.grid_resolution)
+        costmap.info.height = int(self.grid_height / self.grid_resolution)
+        costmap.info.origin.position.x = -self.grid_width / 2.0
+        costmap.info.origin.position.y = -self.grid_height / 2.0
+        costmap.info.origin.orientation.w = 1.0
+        
+        grid = np.zeros((costmap.info.height, costmap.info.width), dtype=np.int8)
+        
+        rx = self.robot_pose.translation.x
+        ry = self.robot_pose.translation.y
+        
+        for i, r in enumerate(self.scan_data.ranges):
+            if r < self.min_range or r > self.scan_data.range_max:
+                continue
+            angle = self.scan_data.angle_min + i * self.scan_data.angle_increment
+            x = rx + r * math.cos(angle)
+            y = ry + r * math.sin(angle)
+            
+            gx = int((x - costmap.info.origin.position.x) / self.grid_resolution)
+            gy = int((y - costmap.info.origin.position.y) / self.grid_resolution)
+            
+            if 0 <= gx < costmap.info.width and 0 <= gy < costmap.info.height:
+                grid[gy, gx] = 100
+        
+        # Inflate obstacles
+        for y in range(costmap.info.height):
+            for x in range(costmap.info.width):
+                if grid[y, x] == 100:
+                    for dy in range(-int(self.inflation_radius / self.grid_resolution),
+                                  int(self.inflation_radius / self.grid_resolution) + 1):
+                        for dx in range(-int(self.inflation_radius / self.grid_resolution),
+                                      int(self.inflation_radius / self.grid_resolution) + 1):
+                            if 0 <= y + dy < costmap.info.height and 0 <= x + dx < costmap.info.width:
+                                dist = math.sqrt(dx**2 + dy**2) * self.grid_resolution
+                                if dist <= self.inflation_radius and grid[y + dy, x + dx] == 0:
+                                    grid[y + dy, x + dx] = int(99 * (1.0 - dist / self.inflation_radius))
+        
+        costmap.data = grid.flatten().tolist()
+        self.grid = grid
+        self.costmap_pub.publish(costmap)
+        
+    def plan_path(self):
+        if not self.grid or not self.robot_pose or not self.goal_pose:
+            return
+        
+        # Convert poses to grid
+        start_x = self.robot_pose.translation.x
+        start_y = self.robot_pose.translation.y
+        goal_x = self.goal_pose.position.x
+        goal_y = self.goal_pose.position.y
+        
+        start_gx = int((start_x + self.grid_width / 2.0) / self.grid_resolution)
+        start_gy = int((start_y + self.grid_height / 2.0) / self.grid_resolution)
+        goal_gx = int((goal_x + self.grid_width / 2.0) / self.grid_resolution)
+        goal_gy = int((goal_y + self.grid_height / 2.0) / self.grid_resolution)
+        
+        if not (0 <= start_gx < self.grid.shape[1] and 0 <= start_gy < self.grid.shape[0] and
+                0 <= goal_gx < self.grid.shape[1] and 0 <= goal_gy < self.grid.shape[0]):
+            self.get_logger().warn('Start or goal outside grid')
+            return
+        
+        # A* algorithm
+        open_list = []
+        heappush(open_list, (0, (start_gx, start_gy)))
+        came_from = {}
+        g_score = { (start_gx, start_gy): 0 }
+        f_score = { (start_gx, start_gy): self.heuristic(start_gx, start_gy, goal_gx, goal_gy) }
+        
+        while open_list:
+            _, current = heappop(open_list)
+            cx, cy = current
+            
+            if (cx, cy) == (goal_gx, goal_gy):
+                self.path = self.reconstruct_path(came_from, current)
+                self.publish_path()
+                return
+            
+            for dx, dy in [(0, 1), (1, 0), (0, -1), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]:
+                nx, ny = cx + dx, cy + dy
+                if not (0 <= nx < self.grid.shape[1] and 0 <= ny < self.grid.shape[0]):
+                    continue
+                if self.grid[ny, nx] >= 50:  # Obstacle or inflated
+                    continue
+                
+                tentative_g = g_score[(cx, cy)] + math.sqrt(dx**2 + dy**2) * self.grid_resolution
+                if (nx, ny) not in g_score or tentative_g < g_score[(nx, ny)]:
+                    came_from[(nx, ny)] = (cx, cy)
+                    g_score[(nx, ny)] = tentative_g
+                    f_score[(nx, ny)] = tentative_g + self.heuristic(nx, ny, goal_gx, goal_gy)
+                    heappush(open_list, (f_score[(nx, ny)], (nx, ny)))
+        
+        self.get_logger().warn('No path found')
+        self.path = []
+        
+    def heuristic(self, x1, y1, x2, y2):
+        return math.sqrt((x2 - x1)**2 + (y2 - y1)**2) * self.grid_resolution
+        
+    def reconstruct_path(self, came_from, current):
+        path = []
+        while current in came_from:
+            path.append(current)
+            current = came_from[current]
+        path.append(current)
+        return path[::-1]
+        
+    def publish_path(self):
+        path_msg = Path()
+        path_msg.header.frame_id = 'odom'
+        path_msg.header.stamp = self.get_clock().now().to_msg()
+        
+        for gx, gy in self.path:
+            pose = PoseStamped()
+            pose.header = path_msg.header
+            pose.pose.position.x = (gx * self.grid_resolution) - (self.grid_width / 2.0)
+            pose.pose.position.y = (gy * self.grid_resolution) - (self.grid_height / 2.0)
+            pose.pose.orientation.w = 1.0
+            path_msg.poses.append(pose)
+        
+        self.path_pub.publish(path_msg)
+        
+    def control_loop(self):
+        if not self.get_robot_pose() or not self.goal_pose or not self.path:
+            return
+        
+        # Follow path
+        next_gx, next_gy = self.path[0]
+        next_x = (next_gx * self.grid_resolution) - (self.grid_width / 2.0)
+        next_y = (next_gy * self.grid_resolution) - (self.grid_height / 2.0)
+        
+        dx = next_x - self.robot_pose.translation.x
+        dy = next_y - self.robot_pose.translation.y
+        distance = math.sqrt(dx**2 + dy**2)
+        
+        if distance < 0.1:
+            self.path.pop(0)
+            if not self.path:
+                self.get_logger().info('Goal reached!')
+                self.goal_pose = None
+                cmd = Twist()
+                self.cmd_vel_pub.publish(cmd)
+                return
+        
+        goal_angle = math.atan2(dy, dx)
+        yaw = self.get_yaw(self.robot_pose.rotation)
+        angle_error = self.normalize_angle(goal_angle - yaw)
+        
+        # Obstacle avoidance
+        cmd = Twist()
+        obstacle_detected = False
+        if self.scan_data:
+            for i, r in enumerate(self.scan_data.ranges):
+                if self.min_range < r < self.safe_dist:
+                    angle = self.scan_data.angle_min + i * self.scan_data.angle_increment
+                    if abs(self.normalize_angle(angle)) < math.pi / 4:
+                        obstacle_detected = True
+                        break
+        
+        if obstacle_detected:
+            cmd.angular.z = self.max_angular_speed if angle_error > 0 else -self.max_angular_speed
+            cmd.linear.x = 0.0
+        else:
+            cmd.linear.x = min(self.max_linear_speed * distance, self.max_linear_speed)
+            cmd.angular.z = max(min(angle_error * 2.0, self.max_angular_speed), -self.max_angular_speed)
+        
+        self.cmd_vel_pub.publish(cmd)
+        
+    def get_yaw(self, q):
+        siny_cosp = 2 * (q.w * q.z + q.x * q.y)
+        cosy_cosp = 1 - 2 * (q.y**2 + q.z**2)
+        return math.atan2(siny_cosp, cosy_cosp)
+        
+    def normalize_angle(self, angle):
+        while angle > math.pi:
+            angle -= 2 * math.pi
+        while angle < -math.pi:
+            angle += 2 * math.pi
+        return angle
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = AStarNavigation()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

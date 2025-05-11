@@ -1,0 +1,144 @@
+planner_server:
+  ros__parameters:
+    expected_planner_frequency: 10.0
+    use_sim_time: False
+    planner_plugins: ["GridBased"]
+    GridBased:
+      plugin: "nav2_dwb_controller/DWBLocalPlanner"
+      min_vel_x: -0.4
+      max_vel_x: 0.4
+      min_vel_y: 0.0
+      max_vel_y: 0.0
+      min_speed_xy: 0.0
+      max_speed_xy: 0.4
+      min_speed_theta: 5.0
+      max_speed_theta: 6.0
+      acc_lim_x: 2.5
+      acc_lim_y: 0.0
+      acc_lim_theta: 3.2
+      decel_lim_x: -2.5
+      decel_lim_y: 0.0
+      decel_lim_theta: -3.2
+      vx_samples: 20
+      vy_samples: 5
+      vtheta_samples: 20
+      sim_time: 1.7
+      linear_granularity: 0.05
+      angular_granularity: 0.025
+      transform_tolerance: 0.2
+      xy_goal_tolerance: 0.25
+      yaw_goal_tolerance: 0.1
+      trans_stopped_velocity: 0.01
+      short_circuit_trajectory_evaluation: True
+      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
+      BaseObstacle.scale: 0.02
+      PathAlign.scale: 0.0
+      PathAlign.forward_point_distance: 0.1
+      GoalAlign.scale: 0.0
+      GoalAlign.forward_point_distance: 0.1
+      PathDist.scale: 32.0
+      GoalDist.scale: 24.0
+      RotateToGoal.scale: 32.0
+      RotateToGoal.slowing_factor: 5.0
+      RotateToGoal.lookahead_time: -1.0
+      Oscillation.scale: 0.1
+
+controller_server:
+  ros__parameters:
+    use_sim_time: False
+    controller_frequency: 20.0
+    controller_plugins: ["FollowPath"]
+    FollowPath:
+      plugin: "nav2_dwb_controller/DWBLocalPlanner"
+      min_vel_x: -0.4
+      max_vel_x: 0.4
+      min_vel_y: 0.0
+      max_vel_y: 0.0
+      min_speed_xy: 0.0
+      max_speed_xy: 0.4
+      min_speed_theta: 5.0
+      max_speed_theta: 6.0
+      acc_lim_x: 2.5
+      acc_lim_y: 0.0
+      acc_lim_theta: 3.2
+      decel_lim_x: -2.5
+      decel_lim_y: 0.0
+      decel_lim_theta: -3.2
+      vx_samples: 20
+      vy_samples: 5
+      vtheta_samples: 20
+      sim_time: 1.7
+      linear_granularity: 0.05
+      angular_granularity: 0.025
+      transform_tolerance: 0.2
+      xy_goal_tolerance: 0.25
+      yaw_goal_tolerance: 0.1
+      trans_stopped_velocity: 0.01
+      short_circuit_trajectory_evaluation: True
+      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
+      BaseObstacle.scale: 0.02
+      PathAlign.scale: 0.0
+      PathAlign.forward_point_distance: 0.1
+      GoalAlign.scale: 0.0
+      GoalAlign.forward_point_distance: 0.1
+      PathDist.scale: 32.0
+      GoalDist.scale: 24.0
+      RotateToGoal.scale: 32.0
+      RotateToGoal.slowing_factor: 5.0
+      RotateToGoal.lookahead_time: -1.0
+      Oscillation.scale: 0.1
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      update_frequency: 5.0
+      publish_frequency: 2.0
+      global_frame: odom
+      robot_base_frame: base_link
+      use_sim_time: False
+      rolling_window: True
+      width: 4.0
+      height: 4.0
+      resolution: 0.05
+      footprint: "[[0.2, 0.2], [0.2, -0.2], [-0.2, -0.2], [-0.2, 0.2]]"
+      plugins: ["obstacle_layer", "inflation_layer"]
+      obstacle_layer:
+        plugin: "nav2_costmap_2d/ObstacleLayer"
+        enabled: True
+        observation_sources: scan
+        scan:
+          topic: /scan
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          obstacle_max_range: 12.0
+          obstacle_min_range: 0.12
+      inflation_layer:
+        plugin: "nav2_costmap_2d/InflationLayer"
+        enabled: True
+        inflation_radius: 0.4
+        cost_scaling_factor: 10.0
+      always_send_full_costmap: True
+
+behavior_server:
+  ros__parameters:
+    costmap_topic: local_costmap/costmap
+    footprint_topic: local_costmap/published_footprint
+    cycle_frequency: 10.0
+    behavior_plugins: ["spin", "backup"]
+    spin:
+      plugin: "nav2_behaviors/Spin"
+      enabled: True
+      max_spin_yaw: 1.57
+      min_spin_yaw: 0.785
+      spin_distance: 0.0
+    backup:
+      plugin: "nav2_behaviors/BackUp"
+      enabled: True
+      backup_distance: -0.3
+      backup_speed: -0.1
+    global_frame: odom
+    robot_base_frame: base_link
+    transform_tolerance: 0.2
+    use_sim_time: False

@@ -1,0 +1,42 @@
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_common/LaserScan
+      Enabled: true
+      Name: LaserScan
+      Topic: /scan
+      Value: true
+      Size: 0.05
+      Color: 255; 0; 0
+    - Class: rviz_common/OccupancyGrid
+      Enabled: true
+      Name: Costmap
+      Topic: /costmap
+      Value: true
+    - Class: rviz_common/Path
+      Enabled: true
+      Name: Path
+      Topic: /plan
+      Value: true
+      Color: 0; 255; 0
+    - Class: rviz_common/Odometry
+      Enabled: true
+      Name: Odometry
+      Topic: /odom
+      Value: true
+      Color: 0; 0; 255
+  Enabled: true
+  Name: root
+  Tools:
+    - Class: rviz_common/Interact
+    - Class: rviz_common/PublishPoint
+    - Class: rviz_common/SetGoal
+      Topic: /goal_pose
+  Value: true
+  Views:
+    Current View:
+      Class: rviz_common/TopDownOrtho
+      Distance: 5.0
+      Name: TopDownOrtho
+      Value: true
+      Yaw: 0.0
