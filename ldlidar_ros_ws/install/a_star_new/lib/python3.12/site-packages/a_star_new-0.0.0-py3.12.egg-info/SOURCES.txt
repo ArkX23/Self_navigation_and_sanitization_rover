@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/a_star_new/a_star_new.egg-info/PKG-INFO
+../../build/a_star_new/a_star_new.egg-info/SOURCES.txt
+../../build/a_star_new/a_star_new.egg-info/dependency_links.txt
+../../build/a_star_new/a_star_new.egg-info/requires.txt
+../../build/a_star_new/a_star_new.egg-info/top_level.txt
+../../build/a_star_new/a_star_new.egg-info/zip-safe
+a_star_new/__init__.py
+a_star_new/simple_a_star.py
+resource/a_star_new
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
