@@ -1,0 +1,105 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found rclpy: 7.1.3 (/opt/ros/jazzy/share/rclpy/cmake)
+-- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+-- Found nav_msgs: 5.3.5 (/opt/ros/jazzy/share/nav_msgs/cmake)
+-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found tf2: 0.36.8 (/opt/ros/jazzy/share/tf2/cmake)
+-- Found tf2_ros: 0.36.8 (/opt/ros/jazzy/share/tf2_ros/cmake)
+-- Found robot_state_publisher: 3.3.3 (/opt/ros/jazzy/share/robot_state_publisher/cmake)
+-- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+-- Found slam_toolbox: 2.8.2 (/opt/ros/jazzy/share/slam_toolbox/cmake)
+-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+-- Found OGRE
+--   static     : OFF
+--   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+--   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media
+-- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+-- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib
+-- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+-- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE
+-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+-- Found ZLIB: /usr/lib/aarch64-linux-gnu/libz.so (found version "1.3")  
+-- Found OpenGL: /usr/lib/aarch64-linux-gnu/libOpenGL.so   
+-- Found X11: /usr/include   
+-- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so
+-- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+-- Found nav2_lifecycle_manager: 1.3.5 (/opt/ros/jazzy/share/nav2_lifecycle_manager/cmake)
+-- Configuring done (6.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/arjun/ldlidar_ros2_ws/build/esp32_bridge
+[ 50%] [32mBuilding CXX object CMakeFiles/esp32_bridge_node.dir/src/esp32_bridge.cpp.o[0m
+[100%] [32m[1mLinking CXX executable esp32_bridge_node[0m
+[100%] Built target esp32_bridge_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/lib/esp32_bridge/esp32_bridge_node
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/a_star_launch.py
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/full_robot.launch.py
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/ld14p.launch.py
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/motors_only.launch.py
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/simple_a_star_launch.py
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/slam_new.launch.py
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//urdf/assem2.urdf
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//meshes/base_link.STL
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/cartographer.lua
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/mapless_nav_params.yaml
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/nav2_params.yaml
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/slam_toolbox.yaml
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/slam_toolbox_params.yaml
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//rviz/simple_a_star.rviz
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/package_run_dependencies/esp32_bridge
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/parent_prefix_path/esp32_bridge
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/ament_prefix_path.sh
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/ament_prefix_path.dsv
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/path.sh
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/path.dsv
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.bash
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.sh
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.zsh
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.dsv
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/package.dsv
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/packages/esp32_bridge
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/cmake/esp32_bridgeConfig.cmake
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/cmake/esp32_bridgeConfig-version.cmake
+-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/package.xml
+-- Installing: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/lib/esp32_bridge/simple_a_star

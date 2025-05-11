@@ -1,0 +1,351 @@
+[0.000000] (-) TimerEvent: {}
+[0.000262] (-) JobUnselected: {'identifier': 'a_star_new'}
+[0.000469] (-) JobUnselected: {'identifier': 'ldlidar_sl_ros2'}
+[0.000495] (-) JobUnselected: {'identifier': 'nav2_mapless'}
+[0.000523] (esp32_bridge) JobQueued: {'identifier': 'esp32_bridge', 'dependencies': OrderedDict()}
+[0.001172] (esp32_bridge) JobStarted: {'identifier': 'esp32_bridge'}
+[0.020809] (esp32_bridge) JobProgress: {'identifier': 'esp32_bridge', 'progress': 'cmake'}
+[0.022479] (esp32_bridge) Command: {'cmd': ['/usr/bin/cmake', '/home/arjun/ldlidar_ros2_ws/src/esp32_bridge', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/arjun/ldlidar_ros2_ws/install/esp32_bridge'], 'cwd': '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'arjun', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/arjun', 'OLDPWD': '/home/arjun/ldlidar_ros2_ws', 'DESKTOP_SESSION': 'ubuntu-wayland', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SYSTEMD_EXEC_PID': '2127', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'arjun', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/arjun-desktop:@/tmp/.ICE-unix/2094,unix/arjun-desktop:/tmp/.ICE-unix/2094', 'GDM_LANG': 'en', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f0f011a2_f18c_4bd3_bfea_e921bce8d615', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-wayland', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.I5DR42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/arjun', 'AMENT_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install/nav2_mapless:/home/arjun/ldlidar_ros2_ws/install/ldlidar_sl_ros2:/home/arjun/ldlidar_ros2_ws/install/esp32_bridge:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-wayland', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1002/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-wayland:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/arjun/ldlidar_ros2_ws/install/a_star_new/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install/nav2_mapless:/home/arjun/ldlidar_ros2_ws/install/ldlidar_sl_ros2:/home/arjun/ldlidar_ros2_ws/install/esp32_bridge:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy'}), 'shell': False}
+[0.099702] (-) TimerEvent: {}
+[0.200091] (-) TimerEvent: {}
+[0.300478] (-) TimerEvent: {}
+[0.400851] (-) TimerEvent: {}
+[0.501236] (-) TimerEvent: {}
+[0.542367] (esp32_bridge) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.601351] (-) TimerEvent: {}
+[0.701705] (-) TimerEvent: {}
+[0.802085] (-) TimerEvent: {}
+[0.902481] (-) TimerEvent: {}
+[1.002854] (-) TimerEvent: {}
+[1.103251] (-) TimerEvent: {}
+[1.136985] (esp32_bridge) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.175742] (esp32_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.203379] (-) TimerEvent: {}
+[1.303704] (-) TimerEvent: {}
+[1.375529] (esp32_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.392277] (esp32_bridge) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.393179] (esp32_bridge) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.394241] (esp32_bridge) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.403804] (-) TimerEvent: {}
+[1.415974] (esp32_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.503946] (-) TimerEvent: {}
+[1.604312] (-) TimerEvent: {}
+[1.620180] (esp32_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.636777] (esp32_bridge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.637205] (esp32_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.637898] (esp32_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.686334] (esp32_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.704380] (-) TimerEvent: {}
+[1.804635] (-) TimerEvent: {}
+[1.904944] (-) TimerEvent: {}
+[1.962685] (esp32_bridge) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[2.005034] (-) TimerEvent: {}
+[2.105340] (-) TimerEvent: {}
+[2.105936] (esp32_bridge) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.205445] (-) TimerEvent: {}
+[2.256674] (esp32_bridge) StdoutLine: {'line': b'-- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[2.305551] (-) TimerEvent: {}
+[2.378962] (esp32_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[2.405644] (-) TimerEvent: {}
+[2.422913] (esp32_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[2.470632] (esp32_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.505755] (-) TimerEvent: {}
+[2.524553] (esp32_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.605863] (-) TimerEvent: {}
+[2.706191] (-) TimerEvent: {}
+[2.720922] (esp32_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[2.732497] (esp32_bridge) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)\n'}
+[2.806309] (-) TimerEvent: {}
+[2.859313] (esp32_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[2.906426] (-) TimerEvent: {}
+[3.006765] (-) TimerEvent: {}
+[3.018081] (esp32_bridge) StdoutLine: {'line': b'-- Found rclpy: 7.1.3 (/opt/ros/jazzy/share/rclpy/cmake)\n'}
+[3.025495] (esp32_bridge) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[3.100412] (esp32_bridge) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.5 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[3.106837] (-) TimerEvent: {}
+[3.154735] (esp32_bridge) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[3.204954] (esp32_bridge) StdoutLine: {'line': b'-- Found tf2: 0.36.8 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[3.206915] (-) TimerEvent: {}
+[3.224570] (esp32_bridge) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.8 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[3.307054] (-) TimerEvent: {}
+[3.407414] (-) TimerEvent: {}
+[3.507774] (-) TimerEvent: {}
+[3.527168] (esp32_bridge) StdoutLine: {'line': b'-- Found robot_state_publisher: 3.3.3 (/opt/ros/jazzy/share/robot_state_publisher/cmake)\n'}
+[3.593950] (esp32_bridge) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2\n'}
+[3.607849] (-) TimerEvent: {}
+[3.633548] (esp32_bridge) StdoutLine: {'line': b'-- Found slam_toolbox: 2.8.2 (/opt/ros/jazzy/share/slam_toolbox/cmake)\n'}
+[3.707967] (-) TimerEvent: {}
+[3.781034] (esp32_bridge) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[3.783600] (esp32_bridge) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[3.783805] (esp32_bridge) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[3.808076] (-) TimerEvent: {}
+[3.908386] (-) TimerEvent: {}
+[4.008714] (-) TimerEvent: {}
+[4.092874] (esp32_bridge) StdoutLine: {'line': b"-- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'\n"}
+[4.096317] (esp32_bridge) StdoutLine: {'line': b'-- Found OGRE\n'}
+[4.096525] (esp32_bridge) StdoutLine: {'line': b'--   static     : OFF\n'}
+[4.096625] (esp32_bridge) StdoutLine: {'line': b'--   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume\n'}
+[4.096715] (esp32_bridge) StdoutLine: {'line': b'--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[4.096813] (esp32_bridge) StdoutLine: {'line': b'--   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media\n'}
+[4.096905] (esp32_bridge) StdoutLine: {'line': b'-- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain\n'}
+[4.096998] (esp32_bridge) StdoutLine: {'line': b'-- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib\n'}
+[4.097163] (esp32_bridge) StdoutLine: {'line': b'-- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[4.097255] (esp32_bridge) StdoutLine: {'line': b'-- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE\n'}
+[4.097338] (esp32_bridge) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[4.097424] (esp32_bridge) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[4.097532] (esp32_bridge) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[4.097617] (esp32_bridge) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[4.108782] (-) TimerEvent: {}
+[4.174537] (esp32_bridge) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/aarch64-linux-gnu/libz.so (found version "1.3")  \n'}
+[4.207560] (esp32_bridge) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/aarch64-linux-gnu/libOpenGL.so   \n'}
+[4.208851] (-) TimerEvent: {}
+[4.309104] (-) TimerEvent: {}
+[4.409424] (-) TimerEvent: {}
+[4.509783] (-) TimerEvent: {}
+[4.557948] (esp32_bridge) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[4.559279] (esp32_bridge) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so\n'}
+[4.609913] (-) TimerEvent: {}
+[4.710411] (-) TimerEvent: {}
+[4.745300] (esp32_bridge) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so - found\n'}
+[4.745609] (esp32_bridge) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[4.810517] (-) TimerEvent: {}
+[4.910835] (-) TimerEvent: {}
+[4.915410] (esp32_bridge) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[4.916411] (esp32_bridge) StdoutLine: {'line': b'-- Looking for connect\n'}
+[5.010982] (-) TimerEvent: {}
+[5.088722] (esp32_bridge) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[5.089010] (esp32_bridge) StdoutLine: {'line': b'-- Looking for remove\n'}
+[5.111104] (-) TimerEvent: {}
+[5.211472] (-) TimerEvent: {}
+[5.263127] (esp32_bridge) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[5.263401] (esp32_bridge) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[5.311583] (-) TimerEvent: {}
+[5.412121] (-) TimerEvent: {}
+[5.439229] (esp32_bridge) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[5.439539] (esp32_bridge) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[5.512154] (-) TimerEvent: {}
+[5.611883] (esp32_bridge) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[5.612166] (-) TimerEvent: {}
+[5.652388] (esp32_bridge) StdoutLine: {'line': b"-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'\n"}
+[5.712285] (-) TimerEvent: {}
+[5.812607] (-) TimerEvent: {}
+[5.911691] (esp32_bridge) StdoutLine: {'line': b'-- Found nav2_lifecycle_manager: 1.3.5 (/opt/ros/jazzy/share/nav2_lifecycle_manager/cmake)\n'}
+[5.912674] (-) TimerEvent: {}
+[6.012935] (-) TimerEvent: {}
+[6.113295] (-) TimerEvent: {}
+[6.213600] (-) TimerEvent: {}
+[6.313943] (-) TimerEvent: {}
+[6.358185] (esp32_bridge) StdoutLine: {'line': b'-- Configuring done (6.3s)\n'}
+[6.387130] (esp32_bridge) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[6.395286] (esp32_bridge) StdoutLine: {'line': b'-- Build files have been written to: /home/arjun/ldlidar_ros2_ws/build/esp32_bridge\n'}
+[6.414069] (-) TimerEvent: {}
+[6.430221] (esp32_bridge) CommandEnded: {'returncode': 0}
+[6.431327] (esp32_bridge) JobProgress: {'identifier': 'esp32_bridge', 'progress': 'build'}
+[6.432320] (esp32_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge', '--', '-j4', '-l4'], 'cwd': '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'arjun', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/arjun', 'OLDPWD': '/home/arjun/ldlidar_ros2_ws', 'DESKTOP_SESSION': 'ubuntu-wayland', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SYSTEMD_EXEC_PID': '2127', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'arjun', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/arjun-desktop:@/tmp/.ICE-unix/2094,unix/arjun-desktop:/tmp/.ICE-unix/2094', 'GDM_LANG': 'en', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f0f011a2_f18c_4bd3_bfea_e921bce8d615', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-wayland', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.I5DR42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/arjun', 'AMENT_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install/nav2_mapless:/home/arjun/ldlidar_ros2_ws/install/ldlidar_sl_ros2:/home/arjun/ldlidar_ros2_ws/install/esp32_bridge:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-wayland', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1002/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-wayland:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/arjun/ldlidar_ros2_ws/install/a_star_new/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install/nav2_mapless:/home/arjun/ldlidar_ros2_ws/install/ldlidar_sl_ros2:/home/arjun/ldlidar_ros2_ws/install/esp32_bridge:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy'}), 'shell': False}
+[6.514174] (-) TimerEvent: {}
+[6.547680] (esp32_bridge) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/esp32_bridge_node.dir/src/esp32_bridge.cpp.o\x1b[0m\n'}
+[6.614282] (-) TimerEvent: {}
+[6.714618] (-) TimerEvent: {}
+[6.814970] (-) TimerEvent: {}
+[6.915343] (-) TimerEvent: {}
+[7.015684] (-) TimerEvent: {}
+[7.116030] (-) TimerEvent: {}
+[7.216410] (-) TimerEvent: {}
+[7.316765] (-) TimerEvent: {}
+[7.417119] (-) TimerEvent: {}
+[7.517468] (-) TimerEvent: {}
+[7.617815] (-) TimerEvent: {}
+[7.718191] (-) TimerEvent: {}
+[7.818540] (-) TimerEvent: {}
+[7.918876] (-) TimerEvent: {}
+[8.019231] (-) TimerEvent: {}
+[8.119582] (-) TimerEvent: {}
+[8.219934] (-) TimerEvent: {}
+[8.320288] (-) TimerEvent: {}
+[8.420659] (-) TimerEvent: {}
+[8.520991] (-) TimerEvent: {}
+[8.621358] (-) TimerEvent: {}
+[8.721698] (-) TimerEvent: {}
+[8.822031] (-) TimerEvent: {}
+[8.922435] (-) TimerEvent: {}
+[9.022848] (-) TimerEvent: {}
+[9.123203] (-) TimerEvent: {}
+[9.223538] (-) TimerEvent: {}
+[9.323875] (-) TimerEvent: {}
+[9.424233] (-) TimerEvent: {}
+[9.524574] (-) TimerEvent: {}
+[9.624928] (-) TimerEvent: {}
+[9.725283] (-) TimerEvent: {}
+[9.825625] (-) TimerEvent: {}
+[9.925965] (-) TimerEvent: {}
+[10.026326] (-) TimerEvent: {}
+[10.126683] (-) TimerEvent: {}
+[10.227065] (-) TimerEvent: {}
+[10.327421] (-) TimerEvent: {}
+[10.427761] (-) TimerEvent: {}
+[10.528119] (-) TimerEvent: {}
+[10.628470] (-) TimerEvent: {}
+[10.728814] (-) TimerEvent: {}
+[10.829158] (-) TimerEvent: {}
+[10.929497] (-) TimerEvent: {}
+[11.029899] (-) TimerEvent: {}
+[11.130267] (-) TimerEvent: {}
+[11.230606] (-) TimerEvent: {}
+[11.330947] (-) TimerEvent: {}
+[11.431302] (-) TimerEvent: {}
+[11.531668] (-) TimerEvent: {}
+[11.632015] (-) TimerEvent: {}
+[11.732365] (-) TimerEvent: {}
+[11.832701] (-) TimerEvent: {}
+[11.933034] (-) TimerEvent: {}
+[12.033381] (-) TimerEvent: {}
+[12.133722] (-) TimerEvent: {}
+[12.234087] (-) TimerEvent: {}
+[12.334417] (-) TimerEvent: {}
+[12.434743] (-) TimerEvent: {}
+[12.535082] (-) TimerEvent: {}
+[12.635434] (-) TimerEvent: {}
+[12.735834] (-) TimerEvent: {}
+[12.836446] (-) TimerEvent: {}
+[12.939484] (-) TimerEvent: {}
+[13.042329] (-) TimerEvent: {}
+[13.142674] (-) TimerEvent: {}
+[13.243026] (-) TimerEvent: {}
+[13.343380] (-) TimerEvent: {}
+[13.443734] (-) TimerEvent: {}
+[13.544092] (-) TimerEvent: {}
+[13.644426] (-) TimerEvent: {}
+[13.744764] (-) TimerEvent: {}
+[13.845127] (-) TimerEvent: {}
+[13.945476] (-) TimerEvent: {}
+[14.045837] (-) TimerEvent: {}
+[14.146171] (-) TimerEvent: {}
+[14.246516] (-) TimerEvent: {}
+[14.346866] (-) TimerEvent: {}
+[14.447278] (-) TimerEvent: {}
+[14.547640] (-) TimerEvent: {}
+[14.648020] (-) TimerEvent: {}
+[14.748421] (-) TimerEvent: {}
+[14.848797] (-) TimerEvent: {}
+[14.949163] (-) TimerEvent: {}
+[15.049587] (-) TimerEvent: {}
+[15.149938] (-) TimerEvent: {}
+[15.250327] (-) TimerEvent: {}
+[15.350695] (-) TimerEvent: {}
+[15.451104] (-) TimerEvent: {}
+[15.551430] (-) TimerEvent: {}
+[15.651768] (-) TimerEvent: {}
+[15.752161] (-) TimerEvent: {}
+[15.852515] (-) TimerEvent: {}
+[15.952859] (-) TimerEvent: {}
+[16.053216] (-) TimerEvent: {}
+[16.158493] (-) TimerEvent: {}
+[16.258820] (-) TimerEvent: {}
+[16.359140] (-) TimerEvent: {}
+[16.459478] (-) TimerEvent: {}
+[16.559802] (-) TimerEvent: {}
+[16.660124] (-) TimerEvent: {}
+[16.760475] (-) TimerEvent: {}
+[16.860804] (-) TimerEvent: {}
+[16.961129] (-) TimerEvent: {}
+[17.061454] (-) TimerEvent: {}
+[17.161803] (-) TimerEvent: {}
+[17.262235] (-) TimerEvent: {}
+[17.362648] (-) TimerEvent: {}
+[17.463068] (-) TimerEvent: {}
+[17.563437] (-) TimerEvent: {}
+[17.663790] (-) TimerEvent: {}
+[17.764118] (-) TimerEvent: {}
+[17.864440] (-) TimerEvent: {}
+[17.964754] (-) TimerEvent: {}
+[18.065100] (-) TimerEvent: {}
+[18.165436] (-) TimerEvent: {}
+[18.265766] (-) TimerEvent: {}
+[18.366109] (-) TimerEvent: {}
+[18.466443] (-) TimerEvent: {}
+[18.566769] (-) TimerEvent: {}
+[18.667107] (-) TimerEvent: {}
+[18.767423] (-) TimerEvent: {}
+[18.867740] (-) TimerEvent: {}
+[18.968091] (-) TimerEvent: {}
+[19.068415] (-) TimerEvent: {}
+[19.168744] (-) TimerEvent: {}
+[19.269099] (-) TimerEvent: {}
+[19.369446] (-) TimerEvent: {}
+[19.469790] (-) TimerEvent: {}
+[19.570121] (-) TimerEvent: {}
+[19.670459] (-) TimerEvent: {}
+[19.770825] (-) TimerEvent: {}
+[19.871225] (-) TimerEvent: {}
+[19.971592] (-) TimerEvent: {}
+[20.071936] (-) TimerEvent: {}
+[20.172323] (-) TimerEvent: {}
+[20.272686] (-) TimerEvent: {}
+[20.373059] (-) TimerEvent: {}
+[20.473418] (-) TimerEvent: {}
+[20.573778] (-) TimerEvent: {}
+[20.674126] (-) TimerEvent: {}
+[20.774487] (-) TimerEvent: {}
+[20.874869] (-) TimerEvent: {}
+[20.975240] (-) TimerEvent: {}
+[21.075591] (-) TimerEvent: {}
+[21.175945] (-) TimerEvent: {}
+[21.196156] (esp32_bridge) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable esp32_bridge_node\x1b[0m\n'}
+[21.276099] (-) TimerEvent: {}
+[21.376461] (-) TimerEvent: {}
+[21.476892] (-) TimerEvent: {}
+[21.577453] (-) TimerEvent: {}
+[21.677929] (-) TimerEvent: {}
+[21.778404] (-) TimerEvent: {}
+[21.878868] (-) TimerEvent: {}
+[21.979549] (-) TimerEvent: {}
+[22.079927] (-) TimerEvent: {}
+[22.180326] (-) TimerEvent: {}
+[22.280681] (-) TimerEvent: {}
+[22.356426] (esp32_bridge) StdoutLine: {'line': b'[100%] Built target esp32_bridge_node\n'}
+[22.379743] (esp32_bridge) CommandEnded: {'returncode': 0}
+[22.380571] (esp32_bridge) JobProgress: {'identifier': 'esp32_bridge', 'progress': 'install'}
+[22.380732] (-) TimerEvent: {}
+[22.405966] (esp32_bridge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge'], 'cwd': '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'arjun', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/arjun', 'OLDPWD': '/home/arjun/ldlidar_ros2_ws', 'DESKTOP_SESSION': 'ubuntu-wayland', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SYSTEMD_EXEC_PID': '2127', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'arjun', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/arjun-desktop:@/tmp/.ICE-unix/2094,unix/arjun-desktop:/tmp/.ICE-unix/2094', 'GDM_LANG': 'en', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f0f011a2_f18c_4bd3_bfea_e921bce8d615', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-wayland', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.I5DR42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/arjun', 'AMENT_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install/nav2_mapless:/home/arjun/ldlidar_ros2_ws/install/ldlidar_sl_ros2:/home/arjun/ldlidar_ros2_ws/install/esp32_bridge:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-wayland', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1002/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-wayland:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/arjun/ldlidar_ros2_ws/install/a_star_new/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/arjun/ldlidar_ros2_ws/install/nav2_mapless:/home/arjun/ldlidar_ros2_ws/install/ldlidar_sl_ros2:/home/arjun/ldlidar_ros2_ws/install/esp32_bridge:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy'}), 'shell': False}
+[22.423486] (esp32_bridge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[22.424235] (esp32_bridge) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[22.424790] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/lib/esp32_bridge/esp32_bridge_node\n'}
+[22.444232] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/a_star_launch.py\n'}
+[22.463277] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/full_robot.launch.py\n'}
+[22.480836] (-) TimerEvent: {}
+[22.482544] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/ld14p.launch.py\n'}
+[22.507353] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/motors_only.launch.py\n'}
+[22.525948] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/simple_a_star_launch.py\n'}
+[22.544295] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/slam_new.launch.py\n'}
+[22.564020] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//urdf/assem2.urdf\n'}
+[22.580924] (-) TimerEvent: {}
+[22.587705] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//meshes/base_link.STL\n'}
+[22.609081] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/cartographer.lua\n'}
+[22.628001] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/mapless_nav_params.yaml\n'}
+[22.646807] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/nav2_params.yaml\n'}
+[22.669982] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/slam_toolbox.yaml\n'}
+[22.681061] (-) TimerEvent: {}
+[22.696781] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/slam_toolbox_params.yaml\n'}
+[22.715683] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//rviz/simple_a_star.rviz\n'}
+[22.734711] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/package_run_dependencies/esp32_bridge\n'}
+[22.753815] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/parent_prefix_path/esp32_bridge\n'}
+[22.772811] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/ament_prefix_path.sh\n'}
+[22.781115] (-) TimerEvent: {}
+[22.799283] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/ament_prefix_path.dsv\n'}
+[22.818094] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/path.sh\n'}
+[22.836863] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/path.dsv\n'}
+[22.855642] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.bash\n'}
+[22.874054] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.sh\n'}
+[22.881192] (-) TimerEvent: {}
+[22.900291] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.zsh\n'}
+[22.919302] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.dsv\n'}
+[22.937542] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/package.dsv\n'}
+[22.957368] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/packages/esp32_bridge\n'}
+[22.976721] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/cmake/esp32_bridgeConfig.cmake\n'}
+[22.981270] (-) TimerEvent: {}
+[23.001860] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/cmake/esp32_bridgeConfig-version.cmake\n'}
+[23.020330] (esp32_bridge) StdoutLine: {'line': b'-- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/package.xml\n'}
+[23.038903] (esp32_bridge) StdoutLine: {'line': b'-- Installing: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/lib/esp32_bridge/simple_a_star\n'}
+[23.042089] (esp32_bridge) CommandEnded: {'returncode': 0}
+[23.068484] (esp32_bridge) JobEnded: {'identifier': 'esp32_bridge', 'rc': 0}
+[23.069361] (-) EventReactorShutdown: {}

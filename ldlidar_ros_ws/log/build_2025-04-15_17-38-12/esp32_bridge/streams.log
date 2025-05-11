@@ -1,0 +1,38 @@
+[0.033s] Invoking command in '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/arjun/ldlidar_ros2_ws/build/esp32_bridge -- -j4 -l4
+[0.274s] [100%] Built target esp32_bridge_node
+[0.295s] Invoked command in '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/arjun/ldlidar_ros2_ws/build/esp32_bridge -- -j4 -l4
+[0.319s] Invoking command in '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/arjun/ldlidar_ros2_ws/build/esp32_bridge
+[0.380s] -- Install configuration: ""
+[0.386s] -- Execute custom install script
+[0.397s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/lib/esp32_bridge/esp32_bridge_node
+[0.408s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/a_star_launch.py
+[0.414s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/full_robot.launch.py
+[0.421s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/ld14p.launch.py
+[0.421s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/motors_only.launch.py
+[0.423s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/simple_a_star_launch.py
+[0.424s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//launch/slam_new.launch.py
+[0.432s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//urdf/assem2.urdf
+[0.435s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//meshes/base_link.STL
+[0.436s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/cartographer.lua
+[0.437s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/mapless_nav_params.yaml
+[0.437s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/nav2_params.yaml
+[0.438s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/slam_toolbox.yaml
+[0.438s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//config/slam_toolbox_params.yaml
+[0.440s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge//rviz/simple_a_star.rviz
+[0.440s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/package_run_dependencies/esp32_bridge
+[0.441s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/parent_prefix_path/esp32_bridge
+[0.441s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/ament_prefix_path.sh
+[0.442s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/ament_prefix_path.dsv
+[0.442s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/path.sh
+[0.443s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/environment/path.dsv
+[0.443s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.bash
+[0.444s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.sh
+[0.445s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.zsh
+[0.445s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/local_setup.dsv
+[0.445s] -- Symlinking: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/package.dsv
+[0.468s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/ament_index/resource_index/packages/esp32_bridge
+[0.468s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/cmake/esp32_bridgeConfig.cmake
+[0.469s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/cmake/esp32_bridgeConfig-version.cmake
+[0.469s] -- Up-to-date symlink: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/share/esp32_bridge/package.xml
+[0.469s] -- Installing: /home/arjun/ldlidar_ros2_ws/install/esp32_bridge/lib/esp32_bridge/simple_a_star
+[0.476s] Invoked command in '/home/arjun/ldlidar_ros2_ws/build/esp32_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arjun/ldlidar_ros2_ws/install/a_star_new:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/arjun/ldlidar_ros2_ws/build/esp32_bridge
